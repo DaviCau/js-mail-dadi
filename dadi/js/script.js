@@ -7,9 +7,12 @@ console.log(numeroComputer);
 document.getElementById("numeri").innerHTML = "Numero del giocatore: " + numeroUtente + "<br>Numero del computer: " + numeroComputer;
 
 if (numeroUtente > numeroComputer) {
+    console.log("Hai vinto!");
     document.getElementById("risultato").innerHTML = "Complimenti, hai vinto&excl;"
 } else if (numeroUtente == numeroComputer) {
+    console.log("Hai pareggiato!");
     document.getElementById("risultato").innerHTML = "Wow, avete pareggiato&excl;"
 } else {
+    console.log("Hai perso!");
     document.getElementById("risultato").innerHTML = "Che peccato, hai perso&excl;"
 }

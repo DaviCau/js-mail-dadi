@@ -8,13 +8,20 @@ console.log(listaMail[0]);
 console.log(listaMail[1]);
 console.log(listaMail[2]);
 
+var trovato = false;
+
 for (var i = 0; i < listaMail.length; i++) {
     if (mailUtente == listaMail[i]) {
-        document.getElementById("message").innerHTML = "Comlimenti&excl; Sei nella lista&excl;";
-        console.log("Accesso consentito a " + mailUtente);
-        break;
-    } else {
-        document.getElementById("message").innerHTML = "Ci dispiace, ma non sei nella lista.";
-        console.log(mailUtente + " non corrisponde a " + listaMail[i]);
+        trovato = true;
     }
+}
+
+console.log(trovato);
+
+if (trovato) {
+    document.getElementById("message").innerHTML = "Comlimenti&excl; Sei nella lista&excl;";
+    console.log("Accesso consentito a " + mailUtente);
+} else {
+    document.getElementById("message").innerHTML = "Ci dispiace, ma non sei nella lista.";
+    console.log("Accesso negato a " + mailUtente);
 }
